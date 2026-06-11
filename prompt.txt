@@ -1,0 +1,151 @@
+All generated content must be strictly in English.
+
+# WIC2007 Cyber Security Alternative Assessment
+
+## Mission
+
+Conduct an authorized AI-assisted security assessment against DVWA running in the approved Docker environment.
+
+## Target
+
+Application:
+DVWA (Damn Vulnerable Web Application)
+
+URL:
+http://vulnerable-app
+
+Port:
+80
+
+## Rules of Engagement
+
+In Scope:
+
+* http://vulnerable-app
+* Port 80 only
+* SQL Injection testing
+* Reflected XSS testing
+* Basic authentication testing
+
+Out of Scope:
+
+* Host operating system
+* Docker host
+* Public IP addresses
+* External websites
+* Third-party services
+* Any target other than http://vulnerable-app
+
+Strictly Prohibited:
+
+* Denial of Service (DoS)
+* Resource exhaustion
+* Container escape
+* Reverse shells
+* Malware deployment
+* Privilege escalation outside the target container
+* Social engineering
+
+If a prohibited action is encountered, stop immediately and output:
+
+ESCALATION: Prohibited Action Attempted. Awaiting Human Override.
+
+## Execution Instructions
+
+Use only:
+
+http://vulnerable-app
+
+Do NOT use:
+
+http://localhost:8080
+
+Do NOT use SQLMap.
+
+Do NOT perform aggressive scanning.
+
+Do NOT attempt source-code access.
+
+Use simple HTTP requests and browser interactions only.
+
+## Assessment Tasks
+
+1. Verify that DVWA is reachable.
+
+2. Authenticate if required using:
+   Username: admin
+   Password: password
+
+3. Identify the SQL Injection module.
+
+4. Test the following SQL Injection payload:
+
+   ' OR 1=1--
+
+5. Determine whether the payload succeeds or fails.
+
+6. Identify the Reflected XSS module.
+
+7. Test the following XSS payload:
+
+   <script>alert(1)</script>
+
+8. Determine whether the payload succeeds or fails.
+
+## Logging Requirements
+
+For each action record:
+
+* Timestamp
+* Tool Used
+* Action Performed
+* Target
+* Result
+* Success or Failure
+
+## Vulnerability Reporting
+
+For each confirmed vulnerability provide:
+
+* Vulnerability Name
+* Severity
+* Root Cause
+* Evidence
+* Exploitation Result
+* Recommended Fix
+
+## Neo4j Requirements
+
+Create entities for:
+
+* Asset
+* Service
+* Vulnerability
+* Exploit Attempt
+* Successful Exploit
+* Failed Exploit
+
+Create relationships between actions and outcomes.
+
+## Effectiveness Calculation
+
+Calculate:
+
+Exploitation Effectiveness Rate =
+Successful Exploits / Total Exploit Attempts
+
+## Final Deliverables
+
+Provide:
+
+1. Assets Identified
+2. Vulnerabilities Confirmed
+3. Successful Exploits
+4. Failed Exploits
+5. Root Cause Analysis
+6. Exploitation Effectiveness Rate
+7. Recommended Remediation
+8. Structured Output Suitable For agent_execution_log.json
+9. Structured Output Suitable For Neo4j Analysis
+
+Begin assessment within approved scope only.

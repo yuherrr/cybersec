@@ -1,0 +1,22 @@
+[
+  {
+    "t.name": "SQL Injection Test",
+    "t.tool": "pentester",
+    "t.token_cost": 0.000817
+  },
+  {
+    "t.name": "Vulnerability Scan",
+    "t.tool": "terminal",
+    "t.token_cost": 0.000589
+  },
+  {
+    "t.name": "Reconnaissance",
+    "t.tool": "terminal",
+    "t.token_cost": 0.000559
+  },
+  {
+    "t.name": "Post-Patch Retest",
+    "t.tool": "pentester",
+    "t.token_cost": 0.000527
+  }
+]

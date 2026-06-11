@@ -1,0 +1,27 @@
+{
+  "selected_model": "qwen/qwen3-30b-a3b",
+  "provider": "OpenRouter",
+  "used_for": "PentAGI main reasoning model for the AI security audit agent",
+  "assignment_requirement": "The selected LLM must cost less than USD 1.00 per 1 million tokens and have sufficient context window for security audit tasks.",
+  "token_cost": {
+    "requirement": "Below USD 1.00 per 1 million tokens",
+    "pricing_evidence": "OpenRouter pricing/model page",
+    "status": "Meets requirement"
+  },
+  "context_window": {
+    "requirement": "Sufficient for Rules of Engagement, tool outputs, logs, and vulnerability reasoning",
+    "context_size": "Large-context model suitable for agentic security audit"
+  },
+  "justification": [
+    "Qwen3 30B A3B is selected as the main PentAGI reasoning model because it is suitable for coding, tool-use reasoning, and cybersecurity audit workflows.",
+    "The model satisfies the assignment cost requirement of below USD 1.00 per 1 million tokens.",
+    "The context window is sufficient to include the Rules of Engagement, target scope, tool outputs, Neo4j action logs, and audit reasoning.",
+    "Using OpenRouter allows one API endpoint to access the selected model and manage usage through API keys and credit limits."
+  ],
+  "embedding_model_note": {
+    "model": "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+    "provider": "OpenRouter",
+    "purpose": "Embedding or retrieval support only, not the main PentAGI reasoning LLM",
+    "reason": "The attached screenshot shows an embedding model. It can support retrieval, but it should not be treated as the main chat model for PentAGI reasoning."
+  }
+}

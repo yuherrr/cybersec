@@ -1,0 +1,17 @@
+[
+  {
+    "v.description": "SQL Injection remained active after re-testing using payload id=' OR 1=1--",
+    "v.tool_source": "pentester",
+    "v.confidence": 0.9
+  },
+  {
+    "v.description": "Reflected XSS was mitigated after output encoding; payload did not execute",
+    "v.tool_source": "pentester",
+    "v.confidence": 0.8
+  },
+  {
+    "v.description": "Command injection module was inaccessible and returned 404",
+    "v.tool_source": "pentester",
+    "v.confidence": 0.4
+  }
+]

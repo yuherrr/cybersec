@@ -1,0 +1,23 @@
+services:
+  vulnerable-app:
+    image: vulnerables/web-dvwa
+    container_name: vulnerable-app
+    ports:
+      - "8080:80"
+    networks:
+      - cybersec-net
+
+  neo4j:
+    image: neo4j:5-community
+    container_name: neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      NEO4J_AUTH: neo4j/password123
+    networks:
+      - cybersec-net
+
+networks:
+  cybersec-net:
+    driver: bridge

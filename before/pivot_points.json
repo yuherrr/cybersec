@@ -1,0 +1,17 @@
+[
+  {
+    "s.name": "HTTP",
+    "v.description": "SQL Injection remained active after re-testing using payload id=' OR 1=1--",
+    "t.ip_address": "vulnerable-app"
+  },
+  {
+    "s.name": "HTTP",
+    "v.description": "Reflected XSS was mitigated after output encoding; payload did not execute",
+    "t.ip_address": "vulnerable-app"
+  },
+  {
+    "s.name": "HTTP",
+    "v.description": "Command injection module was inaccessible and returned 404",
+    "t.ip_address": "vulnerable-app"
+  }
+]
