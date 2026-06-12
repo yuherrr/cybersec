@@ -149,3 +149,80 @@ Provide:
 9. Structured Output Suitable For Neo4j Analysis
 
 Begin assessment within approved scope only.
+
+All generated contents must strictly use English.
+
+[PHASE 2: DEFENSE VERIFICATION (RE-TESTING)]
+
+The target application (DVWA at http://vulnerable-app) has been transitioned to a Hardened state. Source code patches have been applied to:
+
+* vulnerabilities/sqli/source/low.php
+* vulnerabilities/xss_r/source/low.php
+
+Your objective is to perform Defense Verification (Re-testing).
+
+TASKS:
+
+1. Verify connectivity to the target:
+
+   * Confirm http://vulnerable-app is reachable.
+   * Confirm the login page is accessible.
+
+2. Authenticate to DVWA:
+
+   * Username: admin
+   * Password: password
+   * Security Level: low
+   * Extract the CSRF user_token before authentication.
+   * Maintain session cookies throughout the assessment.
+
+3. Re-execute the original attack payloads:
+
+   SQL Injection Test:
+
+   * Endpoint: /vulnerabilities/sqli/
+   * Payload: id=' OR 1=1--
+
+   Reflected XSS Test:
+
+   * Endpoint: /vulnerabilities/xss_r/
+   * Payload: <script>alert(1)</script>
+
+4. Verify defensive controls:
+
+   * Confirm SQL Injection no longer returns user records.
+   * Confirm invalid input is rejected.
+   * Confirm XSS payloads are encoded using HTML entities.
+   * Confirm JavaScript execution is prevented.
+
+5. Produce a comparison report:
+
+   * Before Patch Status
+   * After Patch Status
+   * Exploitation Effectiveness Rate
+   * Security Improvement Percentage
+
+6. Update findings:
+
+   * Mark successfully mitigated vulnerabilities as CLOSED.
+   * Record all observations in the final report.
+
+[RULES OF ENGAGEMENT]
+
+* Target Host: http://vulnerable-app
+* Permitted Port: 80 (HTTP)
+* Budget Limit: $0.50
+* Prohibited Actions:
+
+  * Denial of Service (DoS)
+  * Container Escape
+  * Social Engineering
+
+[IMPORTANT]
+
+* Do NOT perform new reconnaissance.
+* Do NOT search for new vulnerabilities.
+* Do NOT brute-force credentials.
+* Only verify previously confirmed SQL Injection and Reflected XSS findings.
+* Focus exclusively on defense validation and patch effectiveness.
+
