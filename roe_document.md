@@ -1,8 +1,4 @@
-# Rules of Engagement (RoE)
-
-## Project
-
-WIC2007 Cyber Security Alternative Assessment
+# Rules of Engagement (RoE) - WIC2007 Security Audit
 
 ## Objective
 
@@ -16,9 +12,8 @@ DVWA (Damn Vulnerable Web Application)
 
 ### Allowed Target
 
-* Application: DVWA
-* Host: http://vulnerable-app
-* Docker Internal Network Only
+* Application: Damn Vulnerable Web Application (DVWA)
+* Host: http://vulnerable-app (The target must be accessed via this container hostname within the isolated Docker network)
 
 ### Allowed Ports
 
@@ -79,4 +74,4 @@ If the AI agent attempts a prohibited action:
 
 ## Approval
 
-This Rules of Engagement applies only to the designated WIC2007 assessment environment.
+This Rules of Engagement applies only to the designated WIC2007 assessment environment. All activities are limited to the local, isolated Docker environment owned by the student, ensuring compliance with the Computer Crimes Act 1997 (Malaysia) and relevant cybersecurity ethics.
